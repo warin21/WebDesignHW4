@@ -107,7 +107,16 @@
         		</div>
         	</form>
         	<hr/>
-        	<form>
+        	<div class="check">
+				<input class="form-check-input" type="checkbox" onclick="myFunction()">
+				<label class="form-check-label" for="same-address"><span class="text-muted">Billing Address is the same as Shipping Address</span></label>
+			</div>
+			<div class="check">
+				<input class="form-check-input" type="checkbox">
+				<label class="form-check-label" for="save-info"><span class="text-muted">Save this information for next time</span></label>
+			</div>
+			<hr/>
+        	<form id="toggle">
         		<h4>Billing address</h4>
         		<div class="form-group row">
         			<div class="col-xs-4">
@@ -171,25 +180,16 @@
         		</div>
         	</form>
         	<hr/>
-			<div class="check">
-				<input class="form-check-input" type="checkbox">
-				<label class="form-check-label" for="same-address"><span class="text-muted">Billing Address is the same as Shipping Address</span></label>
-			</div>
-			<div class="check">
-				<input class="form-check-input" type="checkbox">
-				<label class="form-check-label" for="save-info"><span class="text-muted">Save this information for next time</span></label>
-			</div>
-			<hr/>
 			<form>
 				<div class="form-group row">
         			<div class="col-xs-4">
 						<label for="country">Payment</label>
 						<div class="check">
-							<input class="form-check-input" type="radio">
+							<input class="form-check-input" type="radio" name="payment">
 							<label class="form-check-label" for="credit">Credit</label>
-							<input class="form-check-input" type="radio">
+							<input class="form-check-input" type="radio" name="payment">
 							<label class="form-check-label" for="debit">Debit</label>
-							<input class="form-check-input" type="radio">
+							<input class="form-check-input" type="radio" name="payment">
 							<label class="form-check-label" for="paypal">Paypal</label>
 						</div>
 					</div>
@@ -264,5 +264,15 @@
         </div>
 
 	</body>
+	<script type="text/javascript">
+		function myFunction() {
+		  var x = document.getElementById("toggle");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}	
+	</script>
 
 </html>
