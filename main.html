@@ -21,6 +21,12 @@
 			right: 10px;
 			top: 30px;
 		}
+		hr {
+		    margin-top: 1rem;
+		    margin-bottom: 1rem;
+		    border: 0;
+		    border-top: 1px solid rgba(0, 0, 0, 0.1);
+		}
 	  </style>
 	</head>
 
@@ -37,6 +43,72 @@
 	        </ul>
 	      </div>
 	    </div>
+	    <div class="col-md-8 order-md-1">
+        	<h4>Shipping address</h4>
+        	<form>
+        		<div class="form-group row">
+        			<div class="col-xs-4">
+        				<label for="firstname">First Name</label>
+        				<input class="form-control" type="text" placeholder="Enter First Name">
+        			</div>
+        			<div class="col-xs-4">
+        				<label for="lastname">Last Name</label>
+        				<input class="form-control" type="text" placeholder="Enter Last Name">
+        			</div>
+        			<div class="col-xs-2">
+        				<label for="username">Username</label>
+        				<input class="form-control" type="text" placeholder="Enter Username">
+        			</div>
+        		</div>
+        		<div class="form-group row">
+        			<div class="col-xs-5">
+      					<label for="email">Email</label>
+      					<input class="form-control" type="email"  placeholder="Enter email">
+        			</div>
+        			<div class="col-xs-5">
+        				<label for="pwd">Password:</label>
+      					<input class="form-control" type="password" placeholder="Enter password">
+        			</div>
+        		</div>
+        		<div class="form-group row">
+        			<div class="col-xs-5">
+	        			<label for="address">Address</label>
+	      				<input class="form-control" type="text" placeholder="Enter Address">
+	      			</div>
+        			<div class="col-xs-5">
+	        			<label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+	      				<input class="form-control" type="text" placeholder="Enter Address 2">
+	      			</div>
+        		</div>
+        		<div class="form-group row">
+        			<div class="col-xs-4">
+						<label for="country">Country</label>
+							<select class="form-control">
+								<option selected="">Choose...</option>
+								<option>USA</option>
+								<option>England</option>
+								<option>Canada</option>
+								<option>Bangladesh</option>
+							</select>
+					</div>
+        			<div class="col-xs-4">
+						<label for="state">State</label>
+							<select class="form-control">
+								<option selected="">Choose...</option>
+								<option>New York</option>
+								<option>New Jersey</option>
+								<option>California</option>
+								<option>Boston</option>
+							</select>
+					</div>
+        			<div class="col-xs-2">
+	        			<label for="zip">Zip Code</label>
+	      				<input class="form-control" type="text" placeholder="1234">
+	      			</div>
+        		</div>
+        	</form>
+        	<hr/>
+        </div>
 
         <div class="col-sm-4">
           <h4>
@@ -65,7 +137,6 @@
                 <small class="text-muted">Brief description</small>
               </div>
             </li>
-
             <li class="list-group-item">
               <div class="text-success">
 	                <h6>Promo code</h6>
@@ -73,13 +144,11 @@
 	                <div id="right-p"><span class="text-success">$-5</span></div>
               </div>
             </li>
-
             <li class="list-group-item">
               <span>Total (USD)</span>
               <div id="right-t"><strong>$20</strong></div>
             </li>
           </ul>
-
           <form class="form-group">
           	<div class="form-inline">
               <input type="text" class="form-control" placeholder="Promo code">
