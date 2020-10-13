@@ -1,1 +1,283 @@
---Main Page
+<!DOCTYPE html>
+<html>
+	<head>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	  <style>
+		#right {
+			 position: absolute;
+			 right: 10px;
+		}
+		#right-t {
+			position: absolute;
+			right: 10px;
+			top: 5px;
+		}
+		#right-p {
+			position: absolute;
+			right: 10px;
+			top: 30px;
+		}
+		hr {
+		    margin-top: 1rem;
+		    margin-bottom: 1rem;
+		    border: 0;
+		    border-top: 1px solid rgba(0, 0, 0, 0.1);
+		}
+		#form1 {
+			padding-left: 180px;
+		}
+	  </style>
+	</head>
+
+	<body>
+	    <div class="container">
+	      <div class="text-center">
+	        <h2>Checkout form</h2>
+	        <ul style="list-style-type:none;">
+	        	<p class="lead">HW #4 using bootstrap, Warin Wohab</p>
+	        	<h4>Resources Used:</h4>
+	        	<li><a href="https://www.w3schools.com/bootstrap/">https://www.w3schools.com/css/</a></li>
+	        	<li><a href="https://www.w3schools.com/bootstrap/">https://www.w3schools.com/bootstrap/</a></li>
+	        	<li>Code Example for HW #4</li>
+	        </ul>
+	      </div>
+	    </div>
+	    <div class="col-md-8 order-md-1" id="form1">
+        	<form>
+        		<h4>Shipping address</h4>
+        		<div class="form-group row">
+        			<div class="col-xs-4">
+        				<label for="firstname">First Name</label>
+        				<input class="form-control" type="text" placeholder="Enter First Name">
+        			</div>
+        			<div class="col-xs-4">
+        				<label for="lastname">Last Name</label>
+        				<input class="form-control" type="text" placeholder="Enter Last Name" >
+        			</div>
+        			<div class="col-xs-2">
+        				<label for="username">Username</label>
+        				<input class="form-control" type="text" placeholder="Username">
+        			</div>
+        		</div>
+        		<div class="form-group row">
+        			<div class="col-xs-5">
+      					<label for="email">Email</label>
+      					<input class="form-control" type="email"  placeholder="Enter email" >
+        			</div>
+        			<div class="col-xs-5">
+        				<label for="pwd">Password:</label>
+      					<input class="form-control" type="password" placeholder="Enter password" >
+        			</div>
+        		</div>
+        		<div class="form-group row">
+        			<div class="col-xs-5">
+	        			<label for="address">Address</label>
+	      				<input class="form-control" type="text" placeholder="Enter Address">
+	      			</div>
+        			<div class="col-xs-5">
+	        			<label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+	      				<input class="form-control" type="text" placeholder="Enter Address 2">
+	      			</div>
+        		</div>
+        		<div class="form-group row">
+        			<div class="col-xs-4">
+						<label for="country">Country</label>
+							<select class="form-control">
+								<option selected="">Choose...</option>
+								<option>USA</option>
+								<option>England</option>
+								<option>Canada</option>
+								<option>Bangladesh</option>
+							</select>
+					</div>
+        			<div class="col-xs-4">
+						<label for="state">State</label>
+							<select class="form-control">
+								<option selected="">Choose...</option>
+								<option>New York</option>
+								<option>New Jersey</option>
+								<option>California</option>
+								<option>Boston</option>
+							</select>
+					</div>
+        			<div class="col-xs-2">
+	        			<label for="zip">Zip Code</label>
+	      				<input class="form-control" type="text" placeholder="1234">
+	      			</div>
+        		</div>
+	        	<hr/>
+	        	<div class="check">
+					<input class="form-check-input" type="checkbox" onclick="myFunction()">
+					<label class="form-check-label" for="same-address"><span class="text-muted">Billing Address is the same as Shipping Address</span></label>
+				</div>
+				<div class="check">
+					<input class="form-check-input" type="checkbox">
+					<label class="form-check-label" for="save-info"><span class="text-muted">Save this information for next time</span></label>
+				</div>
+				<hr/>
+
+	        	<div id="toggle">
+	        		<h4>Billing address</h4>
+	        		<div class="form-group row">
+	        			<div class="col-xs-4">
+	        				<label for="firstname">First Name</label>
+	        				<input class="form-control" type="text" placeholder="Enter First Name">
+	        			</div>
+	        			<div class="col-xs-4">
+	        				<label for="lastname">Last Name</label>
+	        				<input class="form-control" type="text" placeholder="Enter Last Name">
+	        			</div>
+	        			<div class="col-xs-2">
+	        				<label for="username">Username</label>
+	        				<input class="form-control" type="text" placeholder="Enter Username">
+	        			</div>
+	        		</div>
+	        		<div class="form-group row">
+	        			<div class="col-xs-5">
+	      					<label for="email">Email</label>
+	      					<input class="form-control" type="email"  placeholder="Enter email">
+	        			</div>
+	        			<div class="col-xs-5">
+	        				<label for="pwd">Password:</label>
+	      					<input class="form-control" type="password" placeholder="Enter password">
+	        			</div>
+	        		</div>
+	        		<div class="form-group row">
+	        			<div class="col-xs-5">
+		        			<label for="address">Address</label>
+		      				<input class="form-control" type="text" placeholder="Enter Address">
+		      			</div>
+	        			<div class="col-xs-5">
+		        			<label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
+		      				<input class="form-control" type="text" placeholder="Enter Address 2">
+		      			</div>
+	        		</div>
+	        		<div class="form-group row">
+	        			<div class="col-xs-4">
+							<label for="country">Country</label>
+								<select class="form-control">
+									<option selected="">Choose...</option>
+									<option>USA</option>
+									<option>England</option>
+									<option>Canada</option>
+									<option>Bangladesh</option>
+								</select>
+						</div>
+	        			<div class="col-xs-4">
+							<label for="state">State</label>
+								<select class="form-control">
+									<option selected="">Choose...</option>
+									<option>New York</option>
+									<option>New Jersey</option>
+									<option>California</option>
+									<option>Boston</option>
+								</select>
+						</div>
+	        			<div class="col-xs-2">
+		        			<label for="zip">Zip Code</label>
+		      				<input class="form-control" type="text" placeholder="1234">
+		      			</div>
+	        		</div>
+		        </div>
+	        	<hr/>
+				<div class="form-group row">
+        			<div class="col-xs-4">
+						<label for="country">Payment</label>
+						<div class="check">
+							<input class="form-check-input" type="radio" name="payment">
+							<label class="form-check-label" for="credit">Credit</label>
+							<input class="form-check-input" type="radio" name="payment">
+							<label class="form-check-label" for="debit">Debit</label>
+							<input class="form-check-input" type="radio" name="payment">
+							<label class="form-check-label" for="paypal">Paypal</label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group row">
+        			<div class="col-xs-5">
+	        			<label for="card">Name on Card</label>
+	      				<input class="form-control" type="text" placeholder="Name">
+	      			</div>
+	      			<div class="col-xs-5">
+	        			<label for="card">Card Number</label>
+	      				<input class="form-control" type="text" placeholder="Number">
+	      			</div>
+	      		</div>
+				<div class="form-group row">
+        			<div class="col-xs-2">
+	        			<label for="expiration">Expiration</label>
+	      				<input class="form-control" type="text" placeholder="09/20">
+	      			</div>
+	      			<div class="col-xs-2">
+	        			<label for="cvv">CVV</label>
+	      				<input class="form-control" type="text" placeholder="CVV">
+	      			</div>
+	      		</div>
+			</form>
+			<hr/>
+        	<button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+
+        </div>
+        <div class="col-sm-3">
+          <h4>
+            <span class="text-muted">Your cart</span>
+            <span class="badge badge-secondary badge-pill">3</span>
+          </h4>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <div>
+                <h6>First Product</h6> 
+                <div id="right"><span class="text-muted">$12</span></div>
+                <small>Brief description</small> 
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div>
+                <h6>Second product</h6>
+                <div id="right"><span class="text-muted">$8</span></div>
+                <small class="text-muted">Brief description</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div>
+                <h6>Third product</h6>
+                <div id="right"><span class="text-muted">$5</span></div>
+                <small class="text-muted">Brief description</small>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="text-success">
+	                <h6>Promo code</h6>
+	                <small>EXAMPLECODE</small>
+	                <div id="right-p"><span class="text-success">- $5</span></div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <span>Total (USD)</span>
+              <div id="right-t"><strong>$20</strong></div>
+            </li>
+          </ul>
+          <form class="form-group">
+          	<div class="form-inline">
+              <input type="text" class="form-control" placeholder="Promo code">
+              <button type="submit" class="btn btn-info">Redeem</button>
+            </div>
+          </form>
+        </div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function myFunction() {
+		  var x = document.getElementById("toggle");
+		  if (x.style.display === "none") {
+		    x.style.display = "block";
+		  } else {
+		    x.style.display = "none";
+		  }
+		}
+	</script>
+
+</html>
