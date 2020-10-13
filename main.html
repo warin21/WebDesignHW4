@@ -29,6 +29,10 @@
 		#form1 {
 			padding-left: 180px;
 		}
+		.validation{
+			display: none;
+			color: red;
+		}
 	  </style>
 	</head>
 
@@ -46,16 +50,18 @@
 	      </div>
 	    </div>
 	    <div class="col-md-8 order-md-1" id="form1">
-        	<form>
+        	<form name="myForm">
         		<h4>Shipping address</h4>
         		<div class="form-group row">
         			<div class="col-xs-4">
-        				<label for="firstname">First Name</label>
-        				<input class="form-control" type="text" placeholder="Enter First Name">
+	        			<label for="firstname">First Name</label>
+	        			<input class="form-control" type="text" placeholder="Enter First Name" name="firstname">
+	        			<div class="validation" id="fname"><small>Please enter first name</small></div>
         			</div>
         			<div class="col-xs-4">
         				<label for="lastname">Last Name</label>
-        				<input class="form-control" type="text" placeholder="Enter Last Name" >
+        				<input class="form-control" type="text" placeholder="Enter Last Name" name="lastname">
+        				<div class="validation" id="lname"><small>Please enter last name</small></div>
         			</div>
         			<div class="col-xs-2">
         				<label for="username">Username</label>
@@ -65,17 +71,20 @@
         		<div class="form-group row">
         			<div class="col-xs-5">
       					<label for="email">Email</label>
-      					<input class="form-control" type="email"  placeholder="Enter email" >
+      					<input class="form-control" type="email"  placeholder="Enter email" name="email" >
+      					<div class="validation" id="email"><small>Please enter email</small></div>
         			</div>
         			<div class="col-xs-5">
-        				<label for="pwd">Password:</label>
-      					<input class="form-control" type="password" placeholder="Enter password" >
+        				<label for="pwd">Password</label>
+      					<input class="form-control" type="password" placeholder="Enter password" name="pwd">
+      					<div class="validation" id="pwd"><small>Please enter password</small></div>
         			</div>
         		</div>
         		<div class="form-group row">
         			<div class="col-xs-5">
 	        			<label for="address">Address</label>
-	      				<input class="form-control" type="text" placeholder="Enter Address">
+	      				<input class="form-control" type="text" placeholder="Enter Address" name="address">
+	      				<div class="validation" id="address"><small>Please enter address</small></div>
 	      			</div>
         			<div class="col-xs-5">
 	        			<label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
@@ -85,27 +94,30 @@
         		<div class="form-group row">
         			<div class="col-xs-4">
 						<label for="country">Country</label>
-							<select class="form-control">
+							<select class="form-control" id="country">
 								<option selected="">Choose...</option>
 								<option>USA</option>
 								<option>England</option>
 								<option>Canada</option>
 								<option>Bangladesh</option>
 							</select>
+						<div class="validation" id="c"><small>Please select country</small></div>
 					</div>
         			<div class="col-xs-4">
 						<label for="state">State</label>
-							<select class="form-control">
+							<select class="form-control" id="state">
 								<option selected="">Choose...</option>
 								<option>New York</option>
 								<option>New Jersey</option>
 								<option>California</option>
 								<option>Boston</option>
 							</select>
+						<div class="validation" id="s"><small>Please select state</small></div>
 					</div>
         			<div class="col-xs-2">
 	        			<label for="zip">Zip Code</label>
-	      				<input class="form-control" type="text" placeholder="1234">
+	      				<input class="form-control" type="text" placeholder="1234" name="zip">
+	      				<div class="validation" id="zip"><small>Enter zip code</small></div>
 	      			</div>
         		</div>
 	        	<hr/>
@@ -124,11 +136,13 @@
 	        		<div class="form-group row">
 	        			<div class="col-xs-4">
 	        				<label for="firstname">First Name</label>
-	        				<input class="form-control" type="text" placeholder="Enter First Name">
+	        				<input class="form-control" type="text" placeholder="Enter First Name" name="firstname2">
+	        				<div class="validation" id="fname2"><small>Please enter first name</small></div>
 	        			</div>
 	        			<div class="col-xs-4">
 	        				<label for="lastname">Last Name</label>
-	        				<input class="form-control" type="text" placeholder="Enter Last Name">
+	        				<input class="form-control" type="text" placeholder="Enter Last Name" name="lastname2">
+	        				<div class="validation" id="lname2"><small>Please enter last name</small></div>
 	        			</div>
 	        			<div class="col-xs-2">
 	        				<label for="username">Username</label>
@@ -137,18 +151,9 @@
 	        		</div>
 	        		<div class="form-group row">
 	        			<div class="col-xs-5">
-	      					<label for="email">Email</label>
-	      					<input class="form-control" type="email"  placeholder="Enter email">
-	        			</div>
-	        			<div class="col-xs-5">
-	        				<label for="pwd">Password:</label>
-	      					<input class="form-control" type="password" placeholder="Enter password">
-	        			</div>
-	        		</div>
-	        		<div class="form-group row">
-	        			<div class="col-xs-5">
 		        			<label for="address">Address</label>
-		      				<input class="form-control" type="text" placeholder="Enter Address">
+		      				<input class="form-control" type="text" placeholder="Enter Address" name="address2">
+		      				<div class="validation" id="address2"><small>Please enter address</small></div>
 		      			</div>
 	        			<div class="col-xs-5">
 		        			<label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
@@ -158,27 +163,30 @@
 	        		<div class="form-group row">
 	        			<div class="col-xs-4">
 							<label for="country">Country</label>
-								<select class="form-control">
+								<select class="form-control" id="country1">
 									<option selected="">Choose...</option>
 									<option>USA</option>
 									<option>England</option>
 									<option>Canada</option>
 									<option>Bangladesh</option>
 								</select>
+							<div class="validation" id="c1"><small>Please select country</small></div>
 						</div>
 	        			<div class="col-xs-4">
 							<label for="state">State</label>
-								<select class="form-control">
+								<select class="form-control" id="state1">
 									<option selected="">Choose...</option>
 									<option>New York</option>
 									<option>New Jersey</option>
 									<option>California</option>
 									<option>Boston</option>
 								</select>
+							<div class="validation" id="s1"><small>Please select state</small></div>
 						</div>
 	        			<div class="col-xs-2">
 		        			<label for="zip">Zip Code</label>
-		      				<input class="form-control" type="text" placeholder="1234">
+		      				<input class="form-control" type="text" placeholder="1234" name="zip2">
+		      				<div class="validation" id="zip2"><small>Enter zip code</small></div>
 		      			</div>
 	        		</div>
 		        </div>
@@ -199,21 +207,25 @@
 				<div class="form-group row">
         			<div class="col-xs-5">
 	        			<label for="card">Name on Card</label>
-	      				<input class="form-control" type="text" placeholder="Name">
+	      				<input class="form-control" type="text" placeholder="Name" name="ncd">
+	      				<div class="validation" id="ncd"><small>Please enter name on card</small></div>
 	      			</div>
 	      			<div class="col-xs-5">
 	        			<label for="card">Card Number</label>
-	      				<input class="form-control" type="text" placeholder="Number">
+	      				<input class="form-control" type="text" placeholder="Number" name="cdn">
+	      				<div class="validation" id="cdn"><small>Please enter card number</small></div>
 	      			</div>
 	      		</div>
 				<div class="form-group row">
         			<div class="col-xs-2">
 	        			<label for="expiration">Expiration</label>
-	      				<input class="form-control" type="text" placeholder="09/20">
+	      				<input class="form-control" type="text" placeholder="09/20" name="exp">
+	      				<div class="validation" id="exp"><small>Please expiration</small></div>
 	      			</div>
 	      			<div class="col-xs-2">
 	        			<label for="cvv">CVV</label>
-	      				<input class="form-control" type="text" placeholder="CVV">
+	      				<input class="form-control" type="text" placeholder="CVV" name="cvv">
+	      				<div class="validation" id="cvv"><small>Please enter cvv</small></div>
 	      			</div>
 	      		</div>
 			</form>
@@ -280,6 +292,155 @@
 		}
 		function myFunc() {
 			//validate
+			var x = document.forms["myForm"]["firstname"].value;
+			var y = document.getElementById("fname");
+			if (x == null || x == "") {
+				y.style.display = "block";
+			}
+			else{
+				y.style.display = "none";
+			}
+			var z = document.forms["myForm"]["lastname"].value;
+			var w = document.getElementById("lname");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["email"].value;
+			var w = document.getElementById("email");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["pwd"].value;
+			var w = document.getElementById("pwd");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["address"].value;
+			var w = document.getElementById("address");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["zip"].value;
+			var w = document.getElementById("zip");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var sel = document.getElementById("country");
+			var text= sel.options[sel.selectedIndex].text;
+			var w = document.getElementById("c");
+			if (text!="Choose...") {
+				w.style.display = "none";
+			}
+			else{
+				w.style.display = "block";
+			}
+			var sel = document.getElementById("state");
+			var text= sel.options[sel.selectedIndex].text;
+			var w = document.getElementById("s");
+			if (text!="Choose...") {
+				w.style.display = "none";
+			}
+			else{
+				w.style.display = "block";
+			}
+			var sel = document.getElementById("country1");
+			var text= sel.options[sel.selectedIndex].text;
+			var w = document.getElementById("c1");
+			if (text!="Choose...") {
+				w.style.display = "none";
+			}
+			else{
+				w.style.display = "block";
+			}
+			var sel = document.getElementById("state1");
+			var text= sel.options[sel.selectedIndex].text;
+			var w = document.getElementById("s1");
+			if (text!="Choose...") {
+				w.style.display = "none";
+			}
+			else{
+				w.style.display = "block";
+			}
+			var z = document.forms["myForm"]["firstname2"].value;
+			var w = document.getElementById("fname2");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["lastname2"].value;
+			var w = document.getElementById("lname2");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["address2"].value;
+			var w = document.getElementById("address2");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["zip2"].value;
+			var w = document.getElementById("zip2");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["ncd"].value;
+			var w = document.getElementById("ncd");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["cdn"].value;
+			var w = document.getElementById("cdn");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["exp"].value;
+			var w = document.getElementById("exp");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			var z = document.forms["myForm"]["cvv"].value;
+			var w = document.getElementById("cvv");
+			if (z == null || z == "") {
+				w.style.display = "block";
+			}
+			else{
+				w.style.display = "none";
+			}
+			return false;
 		}
 	</script>
 
